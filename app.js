@@ -8,6 +8,7 @@ let characterName = ''
 let currentStatus = "Alive"
 let totalCharacters 
 
+
 const container = document.querySelector('#container')
 const nextPageBtn = document.querySelector('#arrow-right')
 nextPageBtn.addEventListener('click', (e) => nextPage(e, localUrl))
