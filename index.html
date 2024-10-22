@@ -1,11 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  
-</body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Rick and Morty JSON server</title>
+		<script src="./app.js" defer></script>
+    <link rel="stylesheet" href="styles.css">
+	</head>
+
+	<body> 
+		<nav id="nav">
+			<div class="nav-input">
+				<label for="filter">Filtry</label>
+				<input
+					type="text"
+					id="filter"
+					name="filter"
+					placeholder="Wyszukaj po nazwie..." />
+			</div>
+			<div class="nav-radio" id="radio">
+				<input type="radio" name="status" id="alive" value="Alive" checked />
+				<label for="Żywy">Żywy</label>
+				<input type="radio" name="status" id="dead" value="Dead" />
+				<label for="Martwy">Martwy</label>
+				<input type="radio" name="status" id="unknown" value="unknown" />
+				<label for="Nieznany">Nieznany</label>
+			</div>
+		</nav>
+
+		<main id="root">
+      <ul id="container"></ul>
+    </main>
+
+		<section class="btn">
+			<button class="btn-arrow" id="arrow-left"><</button>
+			<button class="btn-arrow" id="arrow-right">></button>
+		</section>
+
+    <section class="form" id="form">
+      <h2 class="form__header">Stwórz postać</h2>
+      <form action="" id="form" class="form__main">
+        <input type="text" id="name-newChar" class="form__main--item" placeholder="Nazwa postaci">
+        <select name="" id="status-newChar" class="form__main--item">
+          <option value="Alive">Żywy</option>
+          <option value="Dead">Martwy</option>
+          <option value="unknown">Nieznany</option>
+        </select>
+        <input type="text" id="species-newChar" class="form__main--item" placeholder="Gatunek">
+        <button type="submit" class="btn-arrow form__main--button">stwórz</button>
+      </form>
+    </section>
+	</body>
 </html>
